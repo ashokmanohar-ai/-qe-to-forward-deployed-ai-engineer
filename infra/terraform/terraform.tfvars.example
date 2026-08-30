@@ -1,0 +1,4 @@
+# Copy outside version control or set TF_VAR_api_key in your shell.
+api_key  = "replace-with-local-disposable-key"
+host_port = 8000
+

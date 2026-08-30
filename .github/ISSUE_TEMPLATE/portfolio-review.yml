@@ -1,0 +1,48 @@
+name: Portfolio project review
+description: Request an evidence-based review of a portfolio project.
+title: "[Portfolio Review] "
+body:
+  - type: input
+    id: project
+    attributes:
+      label: Project and release
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Customer problem and measurable outcome
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Reproduction and evidence links
+    validations:
+      required: true
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Key decisions, trade-offs, and rejected alternatives
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Security, reliability, quality, cost, and production gaps
+    validations:
+      required: true
+  - type: dropdown
+    id: focus
+    attributes:
+      label: Preferred review focus
+      options:
+        - End-to-end FDE readiness
+        - Software engineering
+        - AI evaluation and quality
+        - Cloud and operations
+        - Security and reliability
+        - Customer communication
+    validations:
+      required: true
+

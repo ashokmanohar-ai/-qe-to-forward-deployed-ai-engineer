@@ -1,0 +1,51 @@
+name: Weekly learning evidence
+description: Record a weekly outcome, evidence, failure learned, and next focus.
+title: "[Week NN] Outcome — "
+body:
+  - type: input
+    id: week
+    attributes:
+      label: Week and module
+      placeholder: "Week 14 — Retrieval-Augmented Generation"
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: What I can now do
+      description: Describe an observable capability, not only material completed.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Link commits, tests, eval reports, traces, diagrams, ADRs, runbooks, or demos.
+    validations:
+      required: true
+  - type: textarea
+    id: failure
+    attributes:
+      label: Failure injected and diagnosed
+      description: State the signal, hypotheses, confirmed cause, and fix.
+    validations:
+      required: true
+  - type: textarea
+    id: customer
+    attributes:
+      label: Customer-level explanation
+      description: Explain the outcome, value, risk, and limitation without unnecessary jargon.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Completion checks
+      options:
+        - label: Another engineer can reproduce the result.
+          required: true
+        - label: No real customer data or credentials are included.
+          required: true
+        - label: Known limitations and production gaps are explicit.
+          required: true
+

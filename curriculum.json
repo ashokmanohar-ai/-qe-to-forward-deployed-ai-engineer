@@ -1,0 +1,304 @@
+{
+  "version": "1.0.0",
+  "duration_weeks": 24,
+  "recommended_hours_per_week": "8-10",
+  "stages": [
+    {
+      "id": "foundation",
+      "name": "Foundation",
+      "weeks": [1, 2, 3, 4, 5],
+      "exit_criteria": "Build, test, document, and debug a typed Python API backed by SQL."
+    },
+    {
+      "id": "cloud-deployment",
+      "name": "Cloud and Deployment",
+      "weeks": [6, 7, 8, 9, 10],
+      "exit_criteria": "Ship the service through CI into a reproducible container and Kubernetes environment managed as code."
+    },
+    {
+      "id": "ai-engineering",
+      "name": "AI Engineering",
+      "weeks": [11, 12, 13, 14, 15, 16],
+      "exit_criteria": "Build a grounded, evaluated RAG and tool-calling workflow with explicit failure boundaries."
+    },
+    {
+      "id": "forward-deployed-engineering",
+      "name": "Forward Deployed Engineering",
+      "weeks": [17, 18, 19, 20],
+      "exit_criteria": "Discover, design, prototype, deploy, troubleshoot, and explain a solution for a realistic customer."
+    },
+    {
+      "id": "advanced-production-ai",
+      "name": "Advanced Production AI",
+      "weeks": [21, 22, 23, 24],
+      "exit_criteria": "Defend the capstone's security, reliability, scalability, evaluation, cost, and rollout decisions in an interview loop."
+    }
+  ],
+  "modules": [
+    {
+      "week": 1,
+      "stage": "foundation",
+      "title": "Python for builders",
+      "outcome": "Write typed, modular Python with tests, exceptions, logging, and command-line interfaces.",
+      "lab": "labs/01-python-api-debugging",
+      "challenge": "Repair a brittle API client and prove its retry behavior with tests.",
+      "evidence": "A pull request containing the repaired client, tests, and a short design note.",
+      "skills": ["Python", "typing", "testing", "debugging"],
+      "hours": 10
+    },
+    {
+      "week": 2,
+      "stage": "foundation",
+      "title": "Git, Linux, networking, and runtime basics",
+      "outcome": "Use branches, shell tools, processes, ports, DNS, HTTP, TLS, and logs to investigate a failing service.",
+      "lab": "docs/stages/01-foundation.md#week-2-operate-the-runtime",
+      "challenge": "Explain why a healthy process is unreachable from another container.",
+      "evidence": "A command journal with hypotheses, observations, and the confirmed root cause.",
+      "skills": ["Git", "Linux", "networking", "troubleshooting"],
+      "hours": 8
+    },
+    {
+      "week": 3,
+      "stage": "foundation",
+      "title": "SQL, data modeling, and data quality",
+      "outcome": "Design relational schemas, write joins and aggregations, and protect ingestion with quality constraints.",
+      "lab": "labs/03-sql-data-pipeline",
+      "challenge": "Find and prevent duplicate events without hiding legitimate repeats.",
+      "evidence": "Schema, investigation queries, constraints, and a data-quality report.",
+      "skills": ["SQL", "data modeling", "data quality", "pipelines"],
+      "hours": 9
+    },
+    {
+      "week": 4,
+      "stage": "foundation",
+      "title": "REST APIs and backend services",
+      "outcome": "Build a validated, versioned API with authentication, idempotency, errors, and contract tests.",
+      "lab": "labs/02-rest-service",
+      "challenge": "Make a create operation safe when a client retries after a timeout.",
+      "evidence": "OpenAPI contract, service code, tests, and an idempotency decision record.",
+      "skills": ["REST", "FastAPI", "OpenAPI", "authentication"],
+      "hours": 10
+    },
+    {
+      "week": 5,
+      "stage": "foundation",
+      "title": "Software design and system-design fundamentals",
+      "outcome": "Separate domain, integration, and delivery concerns and reason about availability, consistency, caching, queues, and failure.",
+      "lab": "docs/stages/01-foundation.md#week-5-design-before-scaling",
+      "challenge": "Decompose a synchronous workflow that fails when one customer system is slow.",
+      "evidence": "Context/container diagram and two architecture decision records.",
+      "skills": ["clean architecture", "system design", "ADRs", "resilience"],
+      "hours": 10
+    },
+    {
+      "week": 6,
+      "stage": "cloud-deployment",
+      "title": "Docker and container security",
+      "outcome": "Build a small, non-root, observable container with explicit configuration and health checks.",
+      "lab": "labs/04-container-debugging",
+      "challenge": "Fix a container that is healthy locally but fails under a read-only filesystem.",
+      "evidence": "Dockerfile, image metadata, vulnerability report, and remediation notes.",
+      "skills": ["Docker", "images", "runtime security", "health checks"],
+      "hours": 8
+    },
+    {
+      "week": 7,
+      "stage": "cloud-deployment",
+      "title": "Kubernetes fundamentals",
+      "outcome": "Deploy, configure, scale, observe, and debug an application using core Kubernetes objects.",
+      "lab": "labs/04-container-debugging",
+      "challenge": "Resolve CrashLoopBackOff caused by a missing secret and misleading readiness probe.",
+      "evidence": "Manifests, kubectl investigation log, and a recovery runbook.",
+      "skills": ["Kubernetes", "kubectl", "probes", "resource limits"],
+      "hours": 10
+    },
+    {
+      "week": 8,
+      "stage": "cloud-deployment",
+      "title": "CI/CD and GitHub Actions",
+      "outcome": "Create least-privilege pipelines for quality, security, artifacts, and controlled deployment.",
+      "lab": "docs/stages/02-cloud-deployment.md#week-8-build-a-safe-delivery-pipeline",
+      "challenge": "Prevent untrusted pull-request code from receiving deployment credentials.",
+      "evidence": "Green workflow, failed quality-gate example, and pipeline threat notes.",
+      "skills": ["CI/CD", "GitHub Actions", "quality gates", "OIDC"],
+      "hours": 9
+    },
+    {
+      "week": 9,
+      "stage": "cloud-deployment",
+      "title": "Cloud architecture across AWS, Azure, and GCP",
+      "outcome": "Map identity, compute, networking, storage, databases, observability, and AI services across clouds.",
+      "lab": "docs/stages/02-cloud-deployment.md#week-9-practice-cloud-portability",
+      "challenge": "Choose a primary cloud for a regulated customer without pretending services are identical.",
+      "evidence": "Weighted decision matrix and a one-page customer recommendation.",
+      "skills": ["AWS", "Azure", "GCP", "cloud architecture"],
+      "hours": 8
+    },
+    {
+      "week": 10,
+      "stage": "cloud-deployment",
+      "title": "Terraform, monitoring, and production deployment",
+      "outcome": "Provision a reproducible environment and define logs, metrics, traces, alerts, rollback, and ownership.",
+      "lab": "infra/terraform",
+      "challenge": "Recover safely from drift and a partially failed deployment.",
+      "evidence": "Terraform plan, deployment record, dashboard sketch, and rollback test.",
+      "skills": ["Terraform", "IaC", "monitoring", "deployment"],
+      "hours": 10
+    },
+    {
+      "week": 11,
+      "stage": "ai-engineering",
+      "title": "LLM and Generative AI fundamentals",
+      "outcome": "Explain tokens, context, sampling, latency, model selection, hallucination, and the training/inference boundary.",
+      "lab": "docs/stages/03-ai-engineering.md#week-11-measure-model-behavior",
+      "challenge": "Compare two models using a controlled dataset instead of anecdotal prompts.",
+      "evidence": "Experiment design, raw outputs, metrics, cost estimate, and limitations.",
+      "skills": ["LLMs", "inference", "model selection", "experimentation"],
+      "hours": 9
+    },
+    {
+      "week": 12,
+      "stage": "ai-engineering",
+      "title": "Prompt engineering and structured prompting",
+      "outcome": "Treat prompts, schemas, examples, refusal rules, and tool descriptions as versioned behavioral contracts.",
+      "lab": "docs/stages/03-ai-engineering.md#week-12-turn-prompts-into-contracts",
+      "challenge": "Produce schema-valid outputs across adversarial and ambiguous inputs.",
+      "evidence": "Prompt template, golden dataset, schema checks, and regression report.",
+      "skills": ["prompt engineering", "structured output", "schemas", "prompt tests"],
+      "hours": 8
+    },
+    {
+      "week": 13,
+      "stage": "ai-engineering",
+      "title": "Embeddings and vector databases",
+      "outcome": "Select embeddings, chunking, metadata, filters, indexes, and retrieval metrics for a use case.",
+      "lab": "labs/05-rag-quality",
+      "challenge": "Improve recall without leaking another tenant's document.",
+      "evidence": "Retrieval benchmark with recall@k, latency, filters, and failure analysis.",
+      "skills": ["embeddings", "vector search", "chunking", "retrieval"],
+      "hours": 10
+    },
+    {
+      "week": 14,
+      "stage": "ai-engineering",
+      "title": "Retrieval-Augmented Generation",
+      "outcome": "Build ingestion, retrieval, generation, citations, abstention, and evaluation as separable stages.",
+      "lab": "labs/05-rag-quality",
+      "challenge": "Diagnose whether a bad answer is caused by ingestion, retrieval, context, or generation.",
+      "evidence": "RAG assistant, trace, evaluation results, and failure taxonomy.",
+      "skills": ["RAG", "grounding", "citations", "evaluation"],
+      "hours": 12
+    },
+    {
+      "week": 15,
+      "stage": "ai-engineering",
+      "title": "AI agents and tool-calling workflows",
+      "outcome": "Build bounded plans with typed tools, least privilege, approvals, idempotency, timeouts, and audit trails.",
+      "lab": "labs/06-agent-tool-calling",
+      "challenge": "Prevent a retried tool call from creating two customer tickets.",
+      "evidence": "Agent trace, tool schemas, safety tests, and side-effect policy.",
+      "skills": ["agents", "tool calling", "idempotency", "human approval"],
+      "hours": 10
+    },
+    {
+      "week": 16,
+      "stage": "ai-engineering",
+      "title": "AI evaluation and quality engineering",
+      "outcome": "Combine deterministic tests, retrieval metrics, model graders, human review, red-team cases, and online signals.",
+      "lab": "labs/07-observability-evaluation",
+      "challenge": "Catch a critical-segment regression hidden by an improved average score.",
+      "evidence": "Versioned dataset, evaluation runner, segment dashboard, and release gate.",
+      "skills": ["LLM evaluation", "RAG evaluation", "red teaming", "quality gates"],
+      "hours": 12
+    },
+    {
+      "week": 17,
+      "stage": "forward-deployed-engineering",
+      "title": "Customer discovery and success definition",
+      "outcome": "Separate symptoms from root problems and define users, workflows, constraints, risks, data, and measurable value.",
+      "lab": "docs/scenarios/customer-scenarios.md",
+      "challenge": "Turn 'we need a chatbot' into a testable problem statement and non-goals.",
+      "evidence": "Discovery brief, stakeholder map, open questions, baseline, and success metrics.",
+      "skills": ["discovery", "requirements", "business value", "stakeholder management"],
+      "hours": 8
+    },
+    {
+      "week": 18,
+      "stage": "forward-deployed-engineering",
+      "title": "Solution architecture and customer integration",
+      "outcome": "Design the data, identity, API, model, deployment, evaluation, and operating boundaries of a customer solution.",
+      "lab": "docs/stages/04-forward-deployed-engineering.md#week-18-design-the-smallest-credible-solution",
+      "challenge": "Integrate a legacy API with strict rate limits and incomplete contracts.",
+      "evidence": "Architecture, interface contracts, threat model, risk register, and ADRs.",
+      "skills": ["solution architecture", "integration", "risk management", "technical writing"],
+      "hours": 10
+    },
+    {
+      "week": 19,
+      "stage": "forward-deployed-engineering",
+      "title": "Rapid prototyping and production planning",
+      "outcome": "Time-box uncertainty, build a vertical slice, demonstrate evidence, and define the route to production.",
+      "lab": "projects/08-customer-capstone",
+      "challenge": "Deliver a useful prototype without hiding production gaps behind demo polish.",
+      "evidence": "Demo, evaluation report, assumption log, production gap analysis, and delivery plan.",
+      "skills": ["prototyping", "delivery", "scope control", "customer demos"],
+      "hours": 12
+    },
+    {
+      "week": 20,
+      "stage": "forward-deployed-engineering",
+      "title": "Production troubleshooting and customer communication",
+      "outcome": "Triage an incident, mitigate impact, preserve evidence, communicate clearly, and drive corrective actions.",
+      "lab": "labs/08-production-incident",
+      "challenge": "Handle a latency and cost spike while answer quality is degrading for one segment.",
+      "evidence": "Timeline, status updates, root-cause analysis, corrective actions, and follow-up review.",
+      "skills": ["incident response", "RCA", "communication", "operations"],
+      "hours": 10
+    },
+    {
+      "week": 21,
+      "stage": "advanced-production-ai",
+      "title": "AI security, identity, and secrets",
+      "outcome": "Threat-model prompt injection, data leakage, excessive agency, model supply chain, authentication, authorization, and secrets.",
+      "lab": "docs/stages/05-advanced-production-ai.md#week-21-threat-model-the-complete-path",
+      "challenge": "Stop indirect prompt injection from turning retrieved content into a privileged instruction.",
+      "evidence": "Data-flow diagram, threat model, abuse cases, controls, and residual risks.",
+      "skills": ["AI security", "authentication", "authorization", "secrets management"],
+      "hours": 10
+    },
+    {
+      "week": 22,
+      "stage": "advanced-production-ai",
+      "title": "Reliability, observability, and performance",
+      "outcome": "Define SLOs and instrument the end-to-end path with correlation, traces, metrics, logs, alerts, and runbooks.",
+      "lab": "labs/07-observability-evaluation",
+      "challenge": "Find a retrieval latency regression that is invisible in aggregate request latency.",
+      "evidence": "SLOs, dashboard, trace analysis, alert test, and runbook.",
+      "skills": ["SRE", "observability", "performance", "capacity"],
+      "hours": 10
+    },
+    {
+      "week": 23,
+      "stage": "advanced-production-ai",
+      "title": "Scalability and cost optimization",
+      "outcome": "Load-test queues, models, retrieval, tools, and storage and optimize without violating quality targets.",
+      "lab": "docs/stages/05-advanced-production-ai.md#week-23-optimize-the-system-not-only-the-model",
+      "challenge": "Reduce cost per successful task while preserving tail latency and critical-segment quality.",
+      "evidence": "Workload model, load results, cost model, bottleneck analysis, and chosen trade-offs.",
+      "skills": ["scalability", "load testing", "cost optimization", "caching"],
+      "hours": 12
+    },
+    {
+      "week": 24,
+      "stage": "advanced-production-ai",
+      "title": "Customer capstone and interview loop",
+      "outcome": "Defend a complete solution from discovery through operations and demonstrate it under failure.",
+      "lab": "projects/08-customer-capstone",
+      "challenge": "Present the solution to an executive, an architect, and an on-call engineer at their respective level of detail.",
+      "evidence": "Public release, demo, design review, incident drill, case-study write-up, and mock interview scores.",
+      "skills": ["portfolio", "system design", "customer communication", "interviewing"],
+      "hours": 15
+    }
+  ]
+}
+

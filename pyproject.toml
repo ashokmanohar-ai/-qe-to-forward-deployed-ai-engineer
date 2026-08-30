@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "qe-to-fde-ai"
+version = "1.0.0"
+description = "Interactive roadmap and reference implementation for Quality Engineers transitioning to Forward Deployed AI Engineering"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Ashok Kumar Manohar" }]
+keywords = ["forward-deployed-engineer", "ai-engineering", "quality-engineering", "rag", "llm-evaluation"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+  "fastapi>=0.116,<1.0",
+  "pydantic>=2.11,<3.0",
+  "uvicorn[standard]>=0.35,<1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "httpx>=0.28,<1.0",
+  "mkdocs-material>=9.6,<10.0",
+  "mypy>=1.17,<2.0",
+  "pip-audit>=2.9,<3.0",
+  "pytest>=8.4,<10.0",
+  "pytest-cov>=6.2,<8.0",
+  "ruff>=0.12,<1.0",
+]
+
+[project.scripts]
+fde-roadmap = "qe_fde.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/qe_fde"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers --cov=qe_fde --cov-report=term-missing --cov-fail-under=80"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+extend-exclude = ["labs/*/starter"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S", "SIM", "RUF"]
+ignore = ["S101"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S105", "S106"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+packages = ["qe_fde"]
+
+[tool.coverage.run]
+branch = true
+source = ["qe_fde"]

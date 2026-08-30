@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: qe-fde-config
+data:
+  FDE_ENVIRONMENT: production
+  FDE_LOG_LEVEL: INFO
+  FDE_MAX_DOCUMENTS: "1000"
+  FDE_MAX_TOOL_STEPS: "3"
+
