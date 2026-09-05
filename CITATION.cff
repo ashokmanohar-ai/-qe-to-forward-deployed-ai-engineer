@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use or reference this work, please cite it using the metadata below."
+title: "The AI Quality Engineer: Skills, Architecture Patterns and Operating Model for the Agentic AI Era"
+type: article
+authors:
+  - family-names: Manohar
+    given-names: Ashok Kumar
+version: 1.0.0
+date-released: 2026-09-05
+url: "https://github.com/ashokmanohar-ai/-qe-to-forward-deployed-ai-engineer/blob/main/WHITEPAPER.md"
+repository-code: "https://github.com/ashokmanohar-ai/-qe-to-forward-deployed-ai-engineer"
+license: MIT
+keywords:
+  - AI Quality Engineer
+  - AI Quality Engineering
+  - Quality Engineering
+  - Agentic AI
+  - LLM Evaluation
+  - RAG Evaluation
+  - AI Agent Evaluation
+  - Prompt Testing
+  - AI Security
+  - AI Observability
+  - Human-in-the-Loop
+  - CI/CD
+  - Quality Gates
+  - Responsible AI
+  - AI Governance
+  - Forward Deployed AI Engineer
+  - Test Architect
+abstract: >-
+  A practitioner operating model for the AI Quality Engineer role in the
+  agentic AI era. The work connects conventional software quality engineering
+  with LLM and RAG evaluation, agent trajectory testing, prompt regression,
+  identity and authorization, human approval, AI security, observability,
+  performance and cost engineering, CI/CD quality gates and
+  production-to-regression learning. It introduces an
+  Understand-Model-Evaluate-Control-Observe-Learn model for converting AI
+  uncertainty into measurable quality contracts, reproducible evidence and
+  governed release decisions.
