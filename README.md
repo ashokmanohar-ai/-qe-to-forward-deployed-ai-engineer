@@ -9,6 +9,16 @@
 
 This is not a link collection. It is a **24-week build system** containing guided lessons, hands-on labs, customer simulations, debugging incidents, production infrastructure, an interactive progress tracker, portfolio briefs, and an interview loop. Every stage turns an existing Quality Engineering strength into a demonstrable Forward Deployed Engineering capability.
 
+## 📄 Technical White Paper
+
+**[The AI Quality Engineer: Skills, Architecture Patterns and Operating Model for the Agentic AI Era](WHITEPAPER.md)**
+
+A profession-level synthesis of evidence-driven AI Quality Engineering across deterministic software testing, LLM and RAG evaluation, agent trajectories, prompt regression, MCP/tool quality, identity and authorization, human approval, AI security, observability, performance and cost, CI/CD quality gates and production learning.
+
+> **Core principle:** the AI Quality Engineer exists to make AI-enabled software releasable for reasons that can be explained, reproduced and defended—not because a model appeared impressive in a demo.
+
+Citation metadata is available in [`CITATION.cff`](CITATION.cff), with the publication index in [`publications/README.md`](publications/README.md).
+
 ## What you will be able to do
 
 By the end, you should be able to:
@@ -239,4 +249,3 @@ Improvements are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md), follow the [C
 ## License
 
 Released under the [MIT License](LICENSE). Learning resources linked from this repository retain their respective licenses.
-
