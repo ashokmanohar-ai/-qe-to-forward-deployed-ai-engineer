@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="FDE Solution Studio — Railway Edition by Ashok Kumar Manohar. A recruiter-facing Forward Deployed AI engineering solution design workbench." />
+  <title>FDE Solution Studio — Railway Edition</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-wrap">
+      <div class="logo">FDE</div>
+      <div>
+        <div class="brand">Solution Studio</div>
+        <div class="subbrand">Railway Edition</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#studio">Studio</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#quality">Quality</a>
+      <a href="/health" target="_blank" rel="noreferrer">Health API</a>
+    </nav>
+    <a class="github" href="https://github.com/ashokmanohar-ai" target="_blank" rel="noreferrer">GitHub ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">FORWARD DEPLOYED AI ENGINEERING</span>
+        <h1>Turn a customer problem into a <span>deployable AI solution blueprint.</span></h1>
+        <p>FDE Solution Studio demonstrates the full delivery mindset: discovery, architecture, agentic/RAG patterns, quality engineering, governance, deployment readiness and measurable outcomes.</p>
+        <div class="hero-actions">
+          <a class="primary" href="#studio">Build a solution</a>
+          <a class="secondary" href="#architecture">Explore architecture</a>
+        </div>
+        <div class="trust-row">
+          <span>● Live on Railway</span>
+          <span>API-first</span>
+          <span>No LLM key required</span>
+          <span>Production health check</span>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="panel-head"><span>Delivery Signal</span><span class="status">Operational</span></div>
+        <div class="metric-grid">
+          <div><strong>5</strong><span>Delivery phases</span></div>
+          <div><strong>7</strong><span>Core capabilities</span></div>
+          <div><strong>100%</strong><span>API driven</span></div>
+          <div><strong>/health</strong><span>Runtime probe</span></div>
+        </div>
+        <div class="flow">
+          <div>Discover</div><b>→</b><div>Design</div><b>→</b><div>Validate</div><b>→</b><div>Deploy</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="studio">
+      <div class="section-heading">
+        <span class="eyebrow">INTERACTIVE SOLUTION CANVAS</span>
+        <h2>Frame the problem. Generate the delivery plan.</h2>
+        <p>This deterministic demo models how an FDE converts ambiguous requirements into an executable architecture and quality plan.</p>
+      </div>
+      <div class="studio-grid">
+        <form id="blueprint-form" class="card form-card">
+          <label>Customer problem<textarea id="problem" rows="3">Reduce manual effort in enterprise test design using governed AI workflows</textarea></label>
+          <label>Primary users<input id="users" value="Quality engineers, product owners and engineering leaders" /></label>
+          <label>Data / integrations<input id="data" value="Requirements, historical test assets, REST APIs and enterprise knowledge" /></label>
+          <label>Constraints<input id="constraints" value="Traceability, explainability, tenant isolation, auditability and cost control" /></label>
+          <label>Delivery risk<select id="risk"><option>Medium</option><option>High</option><option>Low</option></select></label>
+          <button class="primary button" type="submit">Generate solution blueprint</button>
+        </form>
+
+        <div class="card output-card">
+          <div class="output-header"><span>Generated Blueprint</span><span id="api-state" class="status neutral">Ready</span></div>
+          <div id="output" class="empty-state">
+            <div class="spark">✦</div>
+            <h3>Architecture-ready output appears here</h3>
+            <p>Generate a blueprint to see architecture layers, delivery phases, quality gates and KPIs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light" id="architecture">
+      <div class="section-heading narrow">
+        <span class="eyebrow">REFERENCE ARCHITECTURE</span>
+        <h2>How an FDE ships from discovery to production.</h2>
+      </div>
+      <div class="architecture-grid">
+        <article class="arch-card"><span>01</span><h3>Customer Discovery</h3><p>Clarify workflows, constraints, stakeholders, value hypothesis and acceptance criteria.</p></article>
+        <article class="arch-card"><span>02</span><h3>Solution & AI Layer</h3><p>Choose deterministic logic, agents or RAG only where they improve the workflow.</p></article>
+        <article class="arch-card"><span>03</span><h3>Quality Engineering</h3><p>Contract tests, Playwright automation, evals, negative paths, guardrails and release gates.</p></article>
+        <article class="arch-card"><span>04</span><h3>Deployment</h3><p>Container/runtime readiness, health checks, configuration, observability and rollback.</p></article>
+      </div>
+      <div class="pipeline">
+        <div><b>Experience</b><span>SaaS UI</span></div><i>→</i>
+        <div><b>API</b><span>Node service</span></div><i>→</i>
+        <div><b>Orchestration</b><span>Workflow / Agents</span></div><i>→</i>
+        <div><b>Context</b><span>RAG / APIs / Data</span></div><i>→</i>
+        <div><b>Quality</b><span>Evals + Tests</span></div><i>→</i>
+        <div><b>Runtime</b><span>Railway</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="quality">
+      <div class="section-heading narrow">
+        <span class="eyebrow">FDE QUALITY BAR</span>
+        <h2>Not just “it works.” It is measurable, supportable and safe to operate.</h2>
+      </div>
+      <div class="quality-grid">
+        <div class="quality-item"><b>01</b><h3>Functional confidence</h3><p>Acceptance criteria, API contracts, negative paths and automated regression.</p></div>
+        <div class="quality-item"><b>02</b><h3>AI confidence</h3><p>Groundedness, relevance, hallucination checks, task success and human review.</p></div>
+        <div class="quality-item"><b>03</b><h3>Operational confidence</h3><p>P95 latency, health probes, logs, graceful degradation and recovery behavior.</p></div>
+        <div class="quality-item"><b>04</b><h3>Governance</h3><p>Traceability, policy gates, audit trails, approvals and controlled rollout.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>Ashok Kumar Manohar</strong><span>Test Architect · AI Quality Engineer · Forward Deployed AI Engineer</span></div>
+    <div>FDE Solution Studio — Railway Edition</div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
