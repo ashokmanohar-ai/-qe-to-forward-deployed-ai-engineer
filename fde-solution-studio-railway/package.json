@@ -1,0 +1,12 @@
+{
+  "name": "fde-solution-studio-railway",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Recruiter-facing Forward Deployed AI engineering solution studio deployed on Railway",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
