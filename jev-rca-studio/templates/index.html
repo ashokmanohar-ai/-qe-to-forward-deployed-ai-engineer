@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JEV RCA Studio</title>
+<style>
+:root{--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--soft:#f8fafc;--brand:#2563eb;--brand2:#7c3aed;--good:#16a34a;--bad:#dc2626}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{max-width:1180px;margin:auto;padding:28px 22px 48px}.top{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:8px 0 24px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:14px}.logo{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;color:#fff;font-weight:800;background:linear-gradient(135deg,var(--brand),var(--brand2));box-shadow:0 10px 25px #2563eb28}
+h1{font-size:25px;margin:0}.sub{color:var(--muted);font-size:13px;margin-top:4px}.owner{text-align:right;color:var(--muted);font-size:13px}.owner b{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.35fr .65fr;gap:22px;margin-top:26px}.card{border:1px solid var(--line);border-radius:22px;padding:24px;background:#fff;box-shadow:0 14px 40px rgba(15,23,42,.06)}
+.hero h2{font-size:36px;line-height:1.05;margin:0 0 12px;letter-spacing:-1.2px}.hero p{color:var(--muted);font-size:15px;line-height:1.7;margin:0}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.badge{border:1px solid var(--line);background:var(--soft);padding:7px 10px;border-radius:999px;font-size:12px}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:12px}.kpi{padding:16px;border-radius:16px;background:var(--soft);border:1px solid var(--line)}.kpi b{font-size:22px;display:block}.kpi span{font-size:12px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:380px 1fr;gap:22px;margin-top:22px}.section-title{font-size:14px;font-weight:800;margin-bottom:14px;letter-spacing:.2px}
+label{font-size:12px;font-weight:700;display:block;margin:13px 0 7px}.inputrow{display:flex;gap:8px}.inputrow input{flex:1}
+input[type=password],input[type=text],input[type=file]{width:100%;border:1px solid var(--line);border-radius:12px;padding:11px 12px;background:#fff;color:var(--ink);outline:none}
+input:focus{border-color:#94a3b8;box-shadow:0 0 0 3px #e2e8f0}button{border:0;border-radius:12px;padding:11px 14px;font-weight:800;cursor:pointer}
+.primary{width:100%;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;margin-top:14px}.ghost{background:var(--soft);border:1px solid var(--line);color:var(--ink)}
+.note{font-size:12px;color:var(--muted);line-height:1.55;margin-top:10px}.status{margin-top:10px;padding:10px 12px;border-radius:12px;background:var(--soft);font-size:12px;display:none}
+.result-empty{min-height:390px;display:grid;place-items:center;text-align:center;color:var(--muted)}.result-empty b{color:var(--ink);display:block;font-size:18px;margin-bottom:6px}
+.summary{display:none}.metricrow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}.metric{padding:14px;border-radius:14px;background:var(--soft);border:1px solid var(--line)}
+.metric b{font-size:22px}.metric span{display:block;font-size:11px;color:var(--muted);margin-top:3px}.table{border:1px solid var(--line);border-radius:14px;overflow:auto;max-height:360px}
+table{width:100%;border-collapse:collapse;min-width:680px}th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);font-size:12px;vertical-align:top}
+th{position:sticky;top:0;background:#fff;font-size:11px;color:var(--muted);z-index:1}.pill{display:inline-block;border-radius:999px;padding:5px 8px;background:#eef2ff;font-weight:700}
+pre{white-space:pre-wrap;word-break:break-word;background:#0f172a;color:#e2e8f0;padding:14px;border-radius:14px;max-height:300px;overflow:auto;font-size:11px}
+.foot{margin-top:26px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:12px}
+@media(max-width:850px){.hero,.grid{grid-template-columns:1fr}.owner{text-align:left}.top{align-items:flex-start;flex-direction:column}.hero h2{font-size:30px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand"><div class="logo">J</div><div><h1>JEV RCA Studio</h1><div class="sub">AI Failure Intelligence for Playwright Test Results</div></div></div>
+  <div class="owner">Designed for Software Quality Engineering<br><b>Ashok Kumar Manohar</b></div>
+</header>
+
+<section class="hero">
+  <div class="card">
+    <h2>Turn failed tests into actionable root cause intelligence.</h2>
+    <p>Upload a Playwright JSON report or ZIP. JEV RCA Studio extracts failure evidence, groups likely causes, and can use JEV to classify failures as product defects, automation issues, environment issues, flaky tests, or test-data problems.</p>
+    <div class="badges"><span class="badge">Playwright</span><span class="badge">JEV · jev-latest</span><span class="badge">Root Cause Analysis</span><span class="badge">Evidence-first</span></div>
+  </div>
+  <div class="card"><div class="section-title">RCA SIGNALS</div><div class="kpis"><div class="kpi"><b>5</b><span>RCA categories</span></div><div class="kpi"><b>10 MB</b><span>Upload limit</span></div><div class="kpi"><b>JSON</b><span>Direct report support</span></div><div class="kpi"><b>ZIP</b><span>Multi-report support</span></div></div></div>
+</section>
+
+<section class="grid">
+  <div class="card">
+    <div class="section-title">ANALYZE PLAYWRIGHT REPORT</div>
+    <label>JEV / TypeSafe AI API Key</label>
+    <div class="inputrow"><input id="apiKey" type="password" placeholder="Paste key for this session"><button class="ghost" id="toggleKey" type="button">Show</button></div>
+    <div class="inputrow" style="margin-top:8px"><button class="ghost" id="testKey" type="button" style="width:100%">Test Connection</button></div>
+    <div id="keyStatus" class="status"></div>
+    <label>Playwright Report</label>
+    <input id="report" type="file" accept=".json,.zip,application/json,application/zip">
+    <div class="note">Your API key is used only for the request and is not persisted by the application. Without a key, local heuristic RCA still runs.</div>
+    <button id="analyze" class="primary" type="button">Analyze Failures</button>
+  </div>
+
+  <div class="card">
+    <div id="empty" class="result-empty"><div><b>Ready for analysis</b>Upload a Playwright report to generate failure intelligence.</div></div>
+    <div id="summary" class="summary">
+      <div class="metricrow"><div class="metric"><b id="mFiles">0</b><span>Files parsed</span></div><div class="metric"><b id="mFailures">0</b><span>Failures detected</span></div><div class="metric"><b id="mJev">—</b><span>JEV status</span></div></div>
+      <div class="section-title">FAILURE CLASSIFICATION</div>
+      <div class="table"><table><thead><tr><th>Test / Failure</th><th>Category</th><th>Evidence</th></tr></thead><tbody id="rows"></tbody></table></div>
+      <div class="section-title" style="margin-top:18px">JEV RESPONSE</div><pre id="jevOut">No JEV call was made.</pre>
+    </div>
+  </div>
+</section>
+
+<footer class="foot"><span>JEV RCA Studio v{{ version }}</span><span>Built for SQA failure triage · Ashok Kumar Manohar</span></footer>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+$("toggleKey").onclick=()=>{const i=$("apiKey");i.type=i.type==="password"?"text":"password";$("toggleKey").textContent=i.type==="password"?"Show":"Hide";};
+$("testKey").onclick=async()=>{const s=$("keyStatus");s.style.display="block";s.textContent="Testing connection…";try{const r=await fetch("/api/test-key",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({api_key:$("apiKey").value})});const d=await r.json();s.textContent=d.message||("HTTP "+r.status);s.style.color=d.ok?"var(--good)":"var(--bad)";}catch(e){s.textContent=e.message;s.style.color="var(--bad)";}};
+$("analyze").onclick=async()=>{const f=$("report").files[0];if(!f){alert("Choose a Playwright JSON or ZIP report.");return;}const b=$("analyze");b.disabled=true;b.textContent="Analyzing…";const fd=new FormData();fd.append("report",f);fd.append("api_key",$("apiKey").value);try{const r=await fetch("/api/analyze",{method:"POST",body:fd});const d=await r.json();if(!r.ok)throw new Error(d.error||"Analysis failed");$("empty").style.display="none";$("summary").style.display="block";$("mFiles").textContent=d.summary.files_parsed;$("mFailures").textContent=d.summary.failure_count;$("mJev").textContent=d.jev?(d.jev.http_status||"ERR"):"Local";const rows=$("rows");rows.innerHTML="";(d.heuristic_rca||[]).forEach(x=>{const tr=document.createElement("tr");const a=document.createElement("td");a.textContent=x.title;const c=document.createElement("td");const p=document.createElement("span");p.className="pill";p.textContent=x.category;c.appendChild(p);const e=document.createElement("td");e.textContent=x.evidence||"No error text captured";tr.append(a,c,e);rows.appendChild(tr);});$("jevOut").textContent=d.jev?JSON.stringify(d.jev,null,2):"No API key supplied. Local heuristic RCA completed.";}catch(e){alert(e.message);}finally{b.disabled=false;b.textContent="Analyze Failures";}};
+</script>
+</body>
+</html>
